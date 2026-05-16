@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="UTF-8"><title>TikTok Auth</title>
+<style>body{font-family:system-ui;max-width:600px;margin:80px auto;padding:24px;text-align:center}</style>
+</head>
+<body>
+<h2>인증 코드</h2>
+<p>아래 코드를 터미널에 붙여넣으세요:</p>
+<pre id="code" style="background:#f0f0f0;padding:16px;border-radius:8px;font-size:18px;word-break:break-all"></pre>
+<script>
+  const p = new URLSearchParams(window.location.search);
+  const code = p.get('code');
+  document.getElementById('code').textContent = code || '코드 없음 — URL: ' + window.location.search;
+</script>
+</body>
+</html>
